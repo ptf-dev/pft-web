@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts: Record<string, { title: string; image: string; date: string; content: string }> = {
+  'propfirmstech-november-2025': {
+    title: 'PropFirmsTech November 2025',
+    image: '/images/blog/blog1.png',
+    date: 'November 2025',
+    content: `<p>November 2025 was a milestone month for PropFirmsTech. The company received industry recognition as the year's best prop trading technology provider at the Funded Trading Awards.</p>
+<p>This achievement reflects our commitment to delivering cutting-edge solutions that empower proprietary trading firms worldwide. From seamless MetaTrader integration to advanced risk management tools, our platform continues to set the standard in the industry.</p>
+<p>Key highlights from November 2025:</p>
+<ul>
+<li>Awarded Best Prop Firm Tech Provider for the second consecutive year</li>
+<li>Onboarded 15+ new prop firms to our platform</li>
+<li>Launched enhanced risk intelligence features with real-time threat detection</li>
+<li>Expanded payment integration options with additional crypto support</li>
+</ul>
+<p>We're grateful to our partners and clients who continue to trust PropFirmsTech as the backbone of their operations. As we move into 2026, we remain focused on innovation, reliability, and exceptional support.</p>`,
+  },
+  'scaling-with-automation': {
+    title: 'How Prop Firms Are Scaling With Automation',
+    image: '/images/blog/blog2.png',
+    date: 'October 2025',
+    content: `<p>Discover how leading prop firms are leveraging automation-first infrastructure to scale operations and reduce overhead costs.</p>
+<p>In today's competitive landscape, prop firms that embrace automation gain a significant edge. From automated payout processing to real-time risk monitoring, technology is transforming how firms operate at scale.</p>
+<p>Key areas where automation drives results:</p>
+<ul>
+<li>Automated KYC and onboarding — reducing setup time from days to hours</li>
+<li>Real-time risk management — continuous monitoring without manual intervention</li>
+<li>Payout automation — processing thousands of payouts with zero manual effort</li>
+<li>Challenge management — automated rule enforcement and account progression</li>
+</ul>
+<p>PropFirmsTech's platform is built with automation at its core. Our clients report up to 42% of workflows fully automated, freeing their teams to focus on growth and strategy rather than repetitive operational tasks.</p>`,
+  },
+  'future-of-prop-trading': {
+    title: 'The Future of Prop Trading Technology',
+    image: '/images/blog/blog3.png',
+    date: 'September 2025',
+    content: `<p>An in-depth look at emerging trends in prop trading technology and how firms can stay ahead of the curve in 2026.</p>
+<p>The prop trading industry is evolving rapidly. Firms that invest in the right technology stack today will be best positioned to capture market share tomorrow.</p>
+<p>Trends shaping the future:</p>
+<ul>
+<li>White-label platforms — enabling firms to launch with their own branding in under 14 days</li>
+<li>Multi-asset support — expanding beyond forex into futures, CFDs, and crypto</li>
+<li>Advanced analytics — data-driven insights for better decision making</li>
+<li>Global payment solutions — supporting traders worldwide with local payment methods</li>
+</ul>
+<p>At PropFirmsTech, we're already building for this future. Our platform supports 45+ integrations, serves 50+ prop firms globally, and processes over $202M in partner revenue. The future of prop trading is here.</p>`,
+  },
+};
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'propfirmstech-november-2025' } },
+    { params: { slug: 'scaling-with-automation' } },
+    { params: { slug: 'future-of-prop-trading' } },
+  ];
+}
+
+const { slug } = Astro.params;
+const post = posts[slug!];
+if (!post) return Astro.redirect('/');
+---
+
+<Layout title={`${post.title} - PropFirmsTech`}>
+  <Header />
+  <main class="pt-32 pb-20 px-6">
+    <article class="max-w-[760px] mx-auto">
+      <a href="/#blog" class="inline-flex items-center gap-2 text-sm text-[#8A8AA3] hover:text-white transition-colors mb-8">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Back to Insights
+      </a>
+      <span class="text-sm text-[#8A8AA3]">{post.date}</span>
+      <h1 class="text-[32px] md:text-[48px] font-bold leading-[1.15] mt-2 mb-8">{post.title}</h1>
+      <img src={post.image} alt={post.title} class="w-full rounded-2xl mb-10" />
+      <div class="prose prose-invert prose-lg max-w-none text-[#c0c0d0] leading-relaxed [&_p]:mb-5 [&_ul]:mb-5 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2" set:html={post.content} />
+    </article>
+  </main>
+  <Footer />
+</Layout>
