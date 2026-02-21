@@ -1,0 +1,35 @@
+---
+const cards = [
+  { title: 'Customised Plan & Rules', description: 'Tailor your trading environment to fit your strategy.', icon: '/images/icons/plans.svg' },
+  { title: 'Seamless Integration', description: 'Optimize your workflow with seamless integration of management.', icon: '/images/icons/integration.svg' },
+  { title: 'CRM System', description: 'Streamline client relationships and operational processes with our CRM system.', icon: '/images/icons/crm.svg' },
+  { title: 'AML Compliance', description: 'Enhance regulatory compliance with automated Anti-Money Laundering.', icon: '/images/icons/aml.svg' },
+  { title: 'Risk Management', description: 'Implement robust prop firm risk management solutions to safeguard your operations.', icon: '/images/icons/risk.svg' },
+  { title: 'Payment Options', description: 'Offer your clients flexibility and convenience with a wide range of payment options.', icon: '/images/icons/payments.svg' },
+];
+const clients = Array.from({length: 8}, (_, i) => `/images/clients/client${i + 1}.svg`);
+---
+
+<section class="py-[120px] px-6">
+  <div class="max-w-[1158px] mx-auto">
+    <div class="grid md:grid-cols-3 gap-5">
+      {cards.map(c => (
+        <div class="bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 h-[217px]">
+          <img src={c.icon} alt="" class="w-6 h-[30px] mb-4" />
+          <h3 class="text-[25px] font-bold">{c.title}</h3>
+          <p class="mt-2 text-[#A0A0A0]">{c.description}</p>
+        </div>
+      ))}
+    </div>
+    <p class="text-center text-[#A0A0A0] mt-12 mb-6">Trusted by 50+ prop firms worldwide</p>
+    <div class="overflow-hidden relative">
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0A0A0A] to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0A0A0A] to-transparent z-10"></div>
+      <div class="flex gap-12 items-center animate-marquee" style="width: max-content;">
+        {[...clients, ...clients].map(src => (
+          <img src={src} alt="" class="h-8 opacity-50 hover:opacity-80 transition-opacity" />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

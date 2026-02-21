@@ -1,0 +1,43 @@
+---
+const navLinks = [
+  { label: 'Home', href: '#' },
+  { label: 'Affiliate Program', href: '#' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Features', href: '#features' },
+  { label: 'Contact Us', href: '#cta' },
+];
+---
+
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#0A0A0A]/60 border-b border-white/5">
+  <div class="max-w-[1158px] mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5">
+      <img src="/images/logo.svg" alt="PropFirmsTech" class="h-8" />
+    </a>
+    <nav aria-label="Main navigation" class="hidden md:flex items-center gap-8">
+      {navLinks.map(link => (
+        <a href={link.href} class="text-[15px] text-[#9ca3af] hover:text-white transition-colors">{link.label}</a>
+      ))}
+    </nav>
+    <a href="#cta" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 rounded-full text-sm font-medium text-white hover:bg-white/5 transition-colors">
+      Contact Us
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-[#9ca3af]" aria-label="Open menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="hidden md:hidden px-6 pb-4" aria-label="Mobile navigation">
+    {navLinks.map(link => (
+      <a href={link.href} class="block py-2 text-[15px] text-[#9ca3af] hover:text-white">{link.label}</a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+</script>

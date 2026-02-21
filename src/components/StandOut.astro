@@ -1,0 +1,58 @@
+---
+const items = [
+  { title: 'Custom Branding', description: 'Full white-label solution with your brand identity.' },
+  { title: 'Dedicated Support', description: 'Priority 24/7 support from our expert team.' },
+  { title: 'Advanced Analytics', description: 'Deep insights that set you apart from competitors.' },
+];
+---
+
+<section class="py-[120px] px-6">
+  <div class="max-w-[1158px] mx-auto flex flex-col md:flex-row gap-12 items-center">
+    <div class="md:w-1/2 aspect-[4/5] relative rounded-xl overflow-hidden" style="border:1px solid transparent;background-image:linear-gradient(#111111,#111111),linear-gradient(135deg,#8B5CF6,#EC4899,#8B5CF6);background-origin:border-box;background-clip:padding-box,border-box;">
+      <div class="absolute inset-0 bg-[#111111]"></div>
+      <div class="absolute inset-0" style="background:radial-gradient(ellipse at 30% 50%,rgba(139,92,246,.25),transparent 60%),radial-gradient(ellipse at 70% 60%,rgba(236,72,153,.2),transparent 60%)"></div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-2/3 rounded-t-full bg-[rgba(255,255,255,0.03)]"></div>
+    </div>
+    <div class="md:w-1/2">
+      <h2 class="text-[55px] font-bold leading-tight mb-8">How Prop firms tech Stands Out?</h2>
+      <div class="flex gap-4">
+        <div class="relative w-[11px] flex-shrink-0 rounded-full bg-[rgba(255,255,255,0.08)] overflow-hidden" style="min-height:100%">
+          <div id="standout-bar" class="absolute top-0 left-0 w-full rounded-full bg-gradient-to-b from-[#8B5CF6] to-[#EC4899] transition-all duration-500" style="height:133px"></div>
+        </div>
+        <div class="flex-1 space-y-2" id="standout-accordion">
+          {items.map((item, i) => (
+            <div class="standout-item border border-[rgba(255,255,255,0.08)] rounded-xl overflow-hidden" data-index={i}>
+              <button class="w-full flex items-center justify-between px-6 py-5 cursor-pointer text-xl font-medium text-left" type="button">
+                {item.title}
+                <svg xmlns="http://www.w3.org/2000/svg" class:list={['w-5 h-5 text-[#A0A0A0] transition-transform duration-300', i === 0 && 'rotate-180']} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="overflow-hidden transition-all duration-300" style={i === 0 ? 'max-height:200px' : 'max-height:0'}>
+                <p class="px-6 pb-5 text-[#A0A0A0] text-xl">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.standout-item button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.standout-item');
+    const content = item.querySelector('div:last-child');
+    const chevron = btn.querySelector('svg');
+    const all = document.querySelectorAll('.standout-item');
+    const bar = document.getElementById('standout-bar');
+    const idx = Number(item.dataset.index);
+    all.forEach(el => {
+      el.querySelector('div:last-child').style.maxHeight = '0';
+      el.querySelector('svg').classList.remove('rotate-180');
+    });
+    content.style.maxHeight = '200px';
+    chevron.classList.add('rotate-180');
+    bar.style.height = ((idx + 1) * 133) + 'px';
+  });
+});
+</script>

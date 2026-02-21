@@ -1,0 +1,31 @@
+---
+const testimonials = [
+  { author: 'Nick', role: 'CEO', handle: '@Nick', quote: 'PropFirmsTech is the backbone of our operations -- their platform sets the standard in the prop space, and their support is outstanding. Huge thanks to Nigel, Herman & the team -- we truly rely on you!' },
+  { author: 'Abdel', role: 'CEO', handle: '@Abdel', quote: "The PropFirmsTech team is without exaggerating one of the best I've met so far. Really knowledgeable and always helpful. The tech itself never fails me and is customizable which is great in our industry!" },
+  { author: 'James', role: 'Co-Founder', handle: '@James', quote: 'PropFirmsTech changed the game for us. Fast setup, stable infra, and great support. Feels like they\'re part of our own team. Our CFD & futures business runs smoother than ever.' },
+  { author: 'Blueberry Funded', role: '', handle: '@BlueberryFunded', quote: 'Axcera/PropFirmsTech helped us scale from a startup to a top 10 firm. Their technology and dedication have been instrumental to our growth.' },
+  { author: 'Alex', role: 'CEO', handle: '@Alex', quote: 'Smart tech, no drama. PropFirmsTech made our workflows tighter and life easier, exactly what we needed.' },
+  { author: 'Zain', role: 'CEO', handle: '@Zain', quote: 'With PropFirmsTech, we finally found a partner who gets it. Solid tech, fast delivery, and real people behind it. Running our futures & CFD setup has never felt this seamless.' },
+];
+---
+
+<section class="py-[120px] px-6">
+  <div class="max-w-[1158px] mx-auto">
+    <h2 class="text-[55px] font-bold text-center">Do Not just Take Our Word for It</h2>
+    <p class="text-xl text-[#A0A0A0] text-center mt-4 mb-12">See What Our Clients Have to Say About PropFirmsTech.</p>
+    <div class="columns-1 md:columns-3 gap-5 space-y-5">
+      {testimonials.map(t => (
+        <div class="break-inside-avoid bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center text-sm font-bold text-[#8B5CF6]">{t.author[0]}</div>
+            <span class="text-sm text-[#A0A0A0] font-medium">{t.handle}</span>
+          </div>
+          <p class="text-lg leading-relaxed">"{t.quote}"</p>
+          <div class="mt-4 text-[#A0A0A0]">
+            <span class="font-medium text-white">{t.author}</span>{t.role && ` · ${t.role}`}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

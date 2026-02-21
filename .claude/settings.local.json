@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx @anthropic-ai/claude-code --print \"test\")",
+      "Bash(for f in Header Hero FeatureCards Stats Features Integrations HowItWorks StandOut Testimonials FAQ Blog CTABanner Footer)",
+      "Bash(do wc:*)",
+      "Bash(done)",
+      "Bash(npm run build)",
+      "Bash(git config:*)",
+      "Bash(git config user.name \"ptf-dev\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch -M main)",
+      "Bash(git add -A)",
+      "Bash(git commit:*)",
+      "Bash(git push -u origin main)"
+    ]
+  }
+}

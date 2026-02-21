@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0A0A0A;
+  --color-dark-card: #111111;
+  --color-dark-border: rgba(255, 255, 255, 0.08);
+  --color-text-secondary: #A0A0A0;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-pink: #EC4899;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
