@@ -4,7 +4,7 @@
       "command": "node",
       "args": ["/Users/klev/Code/claude-talk-to-figma-mcp/dist/talk_to_figma_mcp/server.js"],
       "env": {
-        "FIGMA_CHANNEL_ID": "hcfmtbwp"
+        "FIGMA_CHANNEL_ID": "bxw7o9qp"
       }
     }
   }

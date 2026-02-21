@@ -16,7 +16,7 @@ Figma Source: https://www.figma.com/design/NznlFQhEw6ohJU7oacFX6L/PropFirmstech.
 4. **Features Section** (y:3136, h:1026) - "Features" pill label, 2x2 feature cards with images
 5. **Integrations Section** (y:4262, h:560) - 4x2 grid of integration partner logos
 6. **How It Works** (y:4902, h:1210) - Heading: "Automate payouts, enforce fair challenges & monitor all trades in real time - all from one white-label platform purpose-built for prop firms." Video embed (1040x684) with play button + award banner: "Prop Firms Tech has officially secured the title Best Prop Firm Tech Provider at the Funded Trading Awards -- two years in a row 2024 & 2025." + partner logo strip (6 logos with fade edges)
-7. **Stand Out Section** (y:6232, h:569) - Left: person photo in decorative gradient card (blob-shine, arc vectors, noise texture, glow ellipses). Right: "How Prop firms tech Stands Out?" heading + 3 accordion items with vertical progress bar (11px wide, active segment 133px of 431px)
+7. **Stand Out Section** (y:6232, h:569) - Left: person photo in decorative gradient card (blob-shine, arc vectors, noise texture, glow ellipses). Right: "How PropFirmsTech Stands Out?" heading + 3 accordion items with vertical progress bar (11px wide, active segment 133px of 431px)
 8. **Testimonials** (y:6901, h:1812) - Masonry grid of testimonial cards + FAQ accordion
 9. **Insights/Blog** (y:8813, h:749) - 3-column blog card grid
 10. **Footer with CTA** (y:9662, h:984) - CTA banner + dark footer with links/socials

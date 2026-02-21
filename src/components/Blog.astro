@@ -6,18 +6,23 @@ const posts = [
 ];
 ---
 
-<section class="bg-white py-16 md:py-[120px] px-6">
+<section class="py-16 md:py-[120px] px-6">
   <div class="max-w-[1158px] mx-auto">
     <div class="reveal">
-      <h2 class="text-[36px] md:text-[55px] font-bold text-center text-[#0A0A2E]">Our Insights & Blog</h2>
-      <p class="text-base md:text-xl text-[#6B7280] text-center mt-4 mb-12">Explore The Latest Industry Trends And Best Practices With Our Expert-Driven Insights/Blog</p>
+      <h2 class="text-[36px] md:text-[55px] font-bold text-center">Our Insights & Blog</h2>
+      <p class="text-base md:text-xl text-[#8A8AA3] text-center mt-4 mb-12">Explore The Latest Industry Trends And Best Practices With Our Expert-Driven Insights/Blog</p>
     </div>
     <div class="grid md:grid-cols-3 gap-5">
       {posts.map((p, i) => (
-        <div class="reveal bg-[#0A0A2E] rounded-xl overflow-hidden" style={`transition-delay:${i * 0.08}s`}>
+        <div class="reveal border border-[rgba(100,136,255,0.15)] rounded-xl overflow-hidden hover:border-[rgba(100,136,255,0.3)] transition-colors" style={`transition-delay:${i * 0.08}s`}>
           <img src={p.image} alt={p.title} class="w-full aspect-[4/3] object-cover" />
           <div class="p-5">
             <h3 class="text-base md:text-lg font-bold text-white">{p.title}</h3>
+            <p class="text-sm text-[#8A8AA3] mt-2 leading-relaxed">{p.excerpt}</p>
+            <a href={p.slug} class="inline-flex items-center gap-1 text-sm text-white mt-4 hover:text-[#6488FF] transition-colors">
+              Read More
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
           </div>
         </div>
       ))}

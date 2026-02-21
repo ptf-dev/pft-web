@@ -9,38 +9,44 @@ const socials = [
 ---
 
 <footer class="px-6 pb-8">
-  <div class="max-w-[1158px] mx-auto rounded-2xl border border-[rgba(100,136,255,0.12)] bg-[#060620] p-8 md:p-10" style="clip-path:polygon(3% 0,97% 0,100% 4%,100% 100%,0 100%,0 4%)">
+  <div class="max-w-[1158px] mx-auto rounded-[44px] p-[1px] bg-gradient-to-b from-[#6488FF] to-[#003AFF] relative overflow-hidden">
+  <div class="rounded-[43px] bg-[#01001C] px-11 py-10 relative overflow-hidden">
+    <!-- Background image overlay -->
+    <img src="/images/footer-bg.png" alt="" class="absolute top-0 left-0 w-full h-auto opacity-40 pointer-events-none" />
     <!-- Top row: logo + badges -->
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 pt-2">
+    <div class="relative flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
       <div class="flex items-center gap-2.5">
         <img src="/images/logo-icon.svg" alt="" class="h-10 w-10" />
         <span class="font-semibold text-lg leading-tight">PropFirms<br/>Tech</span>
       </div>
       <div class="flex flex-wrap gap-3">
-        <span class="inline-flex items-center gap-2 px-4 py-2 border border-[rgba(100,136,255,0.15)] rounded-full text-sm text-[#8A8AA3]">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <span class="inline-flex items-center gap-2 px-5 py-3 border border-[rgba(100,136,255,0.15)] rounded-full text-sm text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           Sales@PropFirmsTech.com
         </span>
-        <span class="inline-flex items-center px-4 py-2 border border-[rgba(100,136,255,0.15)] rounded-full text-sm text-[#8A8AA3]">
+        <span class="inline-flex items-center px-5 py-3 border border-[rgba(100,136,255,0.15)] rounded-full text-sm text-white">
           PropFirmsTech LLC is Registered in Sweden
         </span>
       </div>
     </div>
 
     <!-- Middle: description + nav + socials -->
-    <div class="flex flex-col md:flex-row justify-between gap-8 mb-8">
-      <p class="text-sm text-[#8A8AA3] max-w-md leading-relaxed">PropFirmsTech LLC Is A Dynamic And Innovative Financial Technology Company, Revolutionizing Sports Proprietary Trading.<br/><br/>We Are Committed To Delivering Exceptional Trading Solutions To Sports Proprietary Firms Across The Globe.</p>
-      <div class="flex flex-col items-start md:items-end gap-6">
-        <nav class="flex flex-wrap gap-6 text-sm">
-          <a href="#" class="text-[#8A8AA3] hover:text-white transition-colors">Home</a>
-          <a href="#how-it-works" class="text-[#8A8AA3] hover:text-white transition-colors">How It Works</a>
-          <a href="#features" class="text-[#8A8AA3] hover:text-white transition-colors">Features</a>
-          <a href="#cta" class="text-[#8A8AA3] hover:text-white transition-colors">Contact Us</a>
+    <div class="relative flex flex-col md:flex-row justify-between gap-8 mb-10">
+      <div class="max-w-[502px] text-sm text-white/80 leading-relaxed">
+        <p>PropFirmsTech LLC is a dynamic and innovative financial technology company, revolutionizing sports proprietary trading.</p>
+        <p class="mt-5">We are committed to delivering exceptional trading solutions to sports proprietary firms across the globe.</p>
+      </div>
+      <div class="flex flex-col items-start md:items-end gap-8">
+        <nav class="flex flex-wrap gap-[44px] text-base">
+          <a href="#" class="text-white hover:opacity-80 transition-opacity">Home</a>
+          <a href="#how-it-works" class="text-white hover:opacity-80 transition-opacity">How it works</a>
+          <a href="#features" class="text-white hover:opacity-80 transition-opacity">Features</a>
+          <a href="#cta" class="text-white hover:opacity-80 transition-opacity">Contact Us</a>
         </nav>
-        <div class="flex gap-3">
+        <div class="flex gap-4">
           {socials.map(s => (
-            <a href="#" class="w-10 h-10 rounded-full border border-[rgba(100,136,255,0.2)] flex items-center justify-center hover:border-[rgba(100,136,255,0.5)] transition-colors" aria-label={s.name}>
-              <img src={`/images/social/${s.file}.svg`} alt={s.name} class="w-5 h-5" />
+            <a href="#" class="w-11 h-11 rounded-full border border-[rgba(100,136,255,0.2)] flex items-center justify-center hover:border-[rgba(100,136,255,0.5)] transition-colors" aria-label={s.name}>
+              <img src={`/images/social/${s.file}.svg`} alt={s.name} class="w-[21px] h-[21px]" />
             </a>
           ))}
         </div>
@@ -48,13 +54,14 @@ const socials = [
     </div>
 
     <!-- Bottom bar -->
-    <div class="border-t border-[rgba(100,136,255,0.1)] pt-6 flex flex-col md:flex-row justify-between text-xs text-[#8A8AA3]">
-      <span>&copy; {new Date().getFullYear()} PropFirmsTech. All Rights Reserved</span>
-      <div class="flex gap-6 mt-3 md:mt-0">
-        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
-        <a href="#" class="hover:text-white transition-colors">Terms Of Service</a>
+    <div class="relative border-t border-[rgba(100,136,255,0.1)] pt-6 flex flex-col md:flex-row justify-between items-center">
+      <span class="text-base text-white">&copy; {new Date().getFullYear()} PropFirmsTech. All Rights Reserved</span>
+      <div class="flex gap-8 mt-3 md:mt-0 text-sm text-white">
+        <a href="#" class="hover:opacity-80 transition-opacity">Privacy Policy</a>
+        <a href="#" class="hover:opacity-80 transition-opacity">Terms & conditions</a>
+        <a href="#" class="hover:opacity-80 transition-opacity">Terms of service</a>
       </div>
     </div>
+  </div>
   </div>
 </footer>

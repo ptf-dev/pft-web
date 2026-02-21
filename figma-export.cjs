@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const fs = require('fs');
 
-const CHANNEL = 'hcfmtbwp';
+const CHANNEL = 'bxw7o9qp';
 let msgId = 0;
 
 function send(ws, command, params = {}) {
@@ -19,7 +19,7 @@ function waitFor(ws, id, timeout = 30000) {
     const handler = (raw) => {
       try {
         const d = JSON.parse(raw);
-        if (d.type === 'message' && d.message?.commandId === id) {
+        if ((d.type === 'message' || d.type === 'broadcast') && d.sender !== 'You' && d.message?.id === id) {
           clearTimeout(timer);
           ws.off('message', handler);
           resolve(d.message);
