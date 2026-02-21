@@ -8,24 +8,24 @@ const faqs = [
 ];
 ---
 
-<section class="py-[120px] px-6">
-  <div class="max-w-[1158px] mx-auto flex flex-col md:flex-row gap-16">
-    <div class="md:w-1/3">
-      <h2 class="text-[55px] font-bold leading-tight">Frequently Asked Questions?</h2>
-      <p class="mt-4 text-xl text-[#A0A0A0]">Answers to common questions about our services, processes, and what sets us apart.</p>
-      <a href="#" class="mt-6 inline-flex items-center gap-2 px-6 py-3 border border-[rgba(255,255,255,0.08)] rounded-full text-sm hover:bg-white/5 transition-colors">
+<section class="bg-white py-16 md:py-[120px] px-6">
+  <div class="max-w-[1158px] mx-auto flex flex-col md:flex-row gap-10 md:gap-16">
+    <div class="md:w-1/3 reveal">
+      <h2 class="text-[36px] md:text-[55px] font-bold leading-tight text-[#0A0A2E]">Frequently Asked Questions?</h2>
+      <p class="mt-4 text-base md:text-xl text-[#6B7280]">Answers To Common Questions About Our Services, Processes, And What Sets Us Apart.</p>
+      <a href="#" class="mt-6 inline-flex items-center gap-2 px-6 py-3 border border-[#E5E7EB] rounded-full text-sm text-[#0A0A2E] hover:bg-[#F3F4F6] transition-colors">
         Read All FAQs
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="md:w-2/3 space-y-4">
+    <div class="md:w-2/3 space-y-4 reveal delay-200">
       {faqs.map((faq, i) => (
-        <details class="group border border-[rgba(255,255,255,0.08)] rounded-xl" open={i === 0}>
-          <summary class="flex items-center justify-between px-6 h-[72px] cursor-pointer text-xl font-medium">
+        <details class="group border border-[#E5E7EB] rounded-xl" open={i === 0}>
+          <summary class="flex items-center justify-between px-6 h-[72px] cursor-pointer text-lg md:text-xl font-medium text-[#0A0A2E]">
             {faq.q}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A0A0A0] group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#9CA3AF] group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </summary>
-          <p class="px-6 pb-5 text-[#A0A0A0] text-xl">{faq.a}</p>
+          <p class="px-6 pb-5 text-[#6B7280] text-base md:text-xl">{faq.a}</p>
         </details>
       ))}
     </div>

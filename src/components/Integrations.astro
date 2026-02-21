@@ -11,16 +11,16 @@ const partners = [
 ];
 ---
 
-<section class="py-[120px] px-6">
+<section class="py-16 md:py-[120px] px-6">
   <div class="max-w-[1158px] mx-auto">
-    <div class="flex flex-col md:flex-row gap-12 mb-12">
-      <h2 class="text-[55px] font-bold md:w-1/2 leading-tight">Easy Built-In Integrations</h2>
-      <p class="text-xl text-[#A0A0A0] md:w-1/2">Our solutions seamlessly integrate with a powerful suite of 13 essential tools and platforms, empowering you with comprehensive control over your business processes.</p>
+    <div class="flex flex-col md:flex-row gap-8 md:gap-12 mb-12 reveal">
+      <h2 class="text-[36px] md:text-[55px] font-bold md:w-1/2 leading-tight">Easy Built-In Integrations</h2>
+      <p class="text-base md:text-xl text-[#8A8AA3] md:w-1/2">Our solutions seamlessly integrate with a powerful suite of 13 essential tools and platforms, empowering you with comprehensive control over your business processes.</p>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-      {partners.map(p => (
-        <div class="bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl h-28 flex items-center justify-center">
-          <img src={`/images/partners/${p.file}.svg`} alt={p.name} class="h-10 w-auto" />
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+      {partners.map((p, i) => (
+        <div class="reveal bg-[#0A0A2E] border border-[rgba(100,136,255,0.1)] rounded-xl h-24 md:h-28 flex items-center justify-center hover:border-[rgba(100,136,255,0.3)] hover:bg-[#0F0F3A] transition-all" style={`transition-delay:${i * 0.06}s`}>
+          <img src={`/images/partners/${p.file}.svg`} alt={p.name} class="h-8 md:h-10 w-auto" />
         </div>
       ))}
     </div>

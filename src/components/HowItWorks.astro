@@ -2,24 +2,30 @@
 const logos = ['metatrader5', 'match-trader', 'sumsub', 'stripe', 'veriff', 'rise'];
 ---
 
-<section id="how-it-works" class="py-[120px] px-6">
+<section id="how-it-works" class="py-16 md:py-[120px] px-6">
   <div class="max-w-[1158px] mx-auto text-center">
-    <span class="inline-block px-4 py-2 border border-[rgba(255,255,255,0.08)] rounded-full text-sm text-[#A0A0A0]">How It Works</span>
-    <h2 class="mt-6 text-[38px] font-bold max-w-4xl mx-auto">Automate payouts, enforce fair challenges &amp; monitor all trades in real time &mdash; all from one white-label platform purpose-built for prop firms.</h2>
-    <div class="mt-12 aspect-[1040/684] bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl flex items-center justify-center cursor-pointer group">
-      <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <div class="reveal">
+      <span class="inline-block px-4 py-2 border border-[rgba(100,136,255,0.12)] rounded-full text-sm text-[#8A8AA3]">How It Works</span>
+      <h2 class="mt-6 text-[28px] md:text-[38px] font-bold max-w-4xl mx-auto">Automate payouts, enforce fair challenges &amp; monitor all trades in real time &mdash; all from one white-label platform purpose-built for prop firms.</h2>
+    </div>
+    <div class="mt-12 relative rounded-xl overflow-hidden cursor-pointer group reveal">
+      <img src="/images/how-it-works-video.png" alt="How It Works" class="w-full" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#1B18FE]/40 flex items-center justify-center group-hover:bg-[#1B18FE]/60 transition-colors backdrop-blur-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
       </div>
     </div>
-    <div class="mt-12 bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl p-8 text-left">
-      <p class="text-xl">Prop Firms Tech has officially secured the title <strong>Best Prop Firm Tech Provider</strong> at the Funded Trading Awards &mdash; two years in a row 2024 &amp; 2025.</p>
+    <div class="mt-12 bg-[#0A0A2E] border border-[rgba(100,136,255,0.1)] rounded-xl p-6 md:p-8 flex items-center gap-6 text-left reveal">
+      <img src="/images/award-badge.png" alt="Best Prop Firm Tech Provider Award" class="w-14 h-14 md:w-16 md:h-16 object-contain flex-shrink-0" />
+      <p class="text-base md:text-xl">Prop Firms Tech has officially secured the title <strong>Best Prop Firm Tech Provider</strong> at the Funded Trading Awards &mdash; two years in a row 2024 &amp; 2025.</p>
     </div>
-    <div class="mt-12 relative overflow-hidden">
-      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0A0A0A] to-transparent z-10"></div>
-      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0A0A0A] to-transparent z-10"></div>
-      <div class="flex items-center justify-center gap-12 py-6">
+    <div class="mt-12 relative overflow-hidden reveal">
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#01001C] to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#01001C] to-transparent z-10"></div>
+      <div class="flex items-center justify-center gap-8 md:gap-12 py-6">
         {logos.map(l => (
-          <img src={`/images/partners/${l}.svg`} alt={l} class="h-8 w-auto opacity-60" />
+          <img src={`/images/partners/${l}.svg`} alt={l} class="h-6 md:h-8 w-auto opacity-60" />
         ))}
       </div>
     </div>

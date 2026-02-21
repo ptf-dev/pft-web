@@ -14,5 +14,9 @@
       "Bash(git commit:*)",
       "Bash(git push -u origin main)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "figma-community"
+  ],
+  "enableAllProjectMcpServers": true
 }

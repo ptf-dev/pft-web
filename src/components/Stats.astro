@@ -3,25 +3,25 @@ const stats = [
   { value: '$202M+', label: 'Total partner revenue' },
   { value: '45+', label: 'Integrations' },
   { value: '45K+', label: 'Accounts created monthly' },
-  { value: '0M+', label: 'Unique traders onboarded' },
+  { value: '10M+', label: 'Unique traders onboarded' },
   { value: '42%', label: 'Of workflows fully automated' },
   { value: '24/7', label: 'Support coverage' },
 ];
 ---
 
-<section class="py-[120px] px-6">
+<section class="bg-white py-16 md:py-[120px] px-6">
   <div class="max-w-[1158px] mx-auto flex flex-col md:flex-row gap-12">
-    <div class="md:w-[40%] flex flex-col items-start">
-      <h2 class="text-[55px] font-bold leading-tight">Scale. Speed. Control.</h2>
-      <p class="mt-4 text-xl text-[#A0A0A0]">Production-proven performance for modern trading firms. Automation-first infrastructure, real-time risk oversight, and global scale backed by measurable results.</p>
-      <a href="#cta" class="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] rounded-full font-medium hover:opacity-90 transition-opacity">Book a Demo <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+    <div class="md:w-[40%] flex flex-col items-start reveal">
+      <h2 class="text-[36px] md:text-[55px] font-bold leading-tight text-[#0A0A2E]">Scale. Speed. Control.</h2>
+      <p class="mt-4 text-base md:text-lg text-[#6B7280]">Production-Proven Performance For Modern Trading Firms. Automation-First Infrastructure, Real-Time Risk Oversight, And Global Scale Backed By Measurable Results.</p>
+      <a href="#cta" class="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#0A0A2E] text-white rounded-full text-sm font-medium hover:opacity-90 transition-opacity">Book A Demo</a>
     </div>
-    <div class="md:w-[60%]">
+    <div class="md:w-[60%] reveal delay-200">
       <div class="grid grid-cols-2">
         {stats.map((s, i) => (
-          <div class:list={["py-8 text-center", i < 4 && "border-b border-[rgba(255,255,255,0.08)]"]}>
-            <div class="text-[38px] font-bold">{s.value}</div>
-            <div class="text-[23px] text-[#A0A0A0]">{s.label}</div>
+          <div class:list={["py-6 md:py-8 text-center", i < 4 && "border-b border-[#E5E7EB]"]}>
+            <div class="text-[28px] md:text-[38px] font-bold text-[#0A0A2E]">{s.value}</div>
+            <div class="text-sm md:text-base text-[#6B7280]">{s.label}</div>
           </div>
         ))}
       </div>
