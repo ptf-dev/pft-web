@@ -1,8 +1,8 @@
 ---
 const navLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Features', href: '#features' },
+  { label: 'Home', href: '/' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'Features', href: '/#features' },
 ];
 ---
 
@@ -16,7 +16,7 @@ const navLinks = [
         <a href={link.href} class="text-[15px] text-[#8A8AA3] hover:text-white transition-colors">{link.label}</a>
       ))}
     </nav>
-    <a href="#cta" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 border border-[rgba(100,136,255,0.15)] rounded-full text-sm font-medium text-white hover:bg-[#1B18FE]/10 transition-colors">
+    <a href="/#cta" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 border border-[rgba(100,136,255,0.15)] rounded-full text-sm font-medium text-white hover:bg-[#1B18FE]/10 transition-colors">
       Contact Us
       <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </a>
@@ -28,7 +28,7 @@ const navLinks = [
     {navLinks.map(link => (
       <a href={link.href} class="block py-3 text-[15px] text-[#8A8AA3] hover:text-white border-b border-[rgba(100,136,255,0.06)]">{link.label}</a>
     ))}
-    <a href="#cta" class="mt-4 block w-full text-center py-3 bg-gradient-to-r from-[#6488FF] to-[#1B18FE] rounded-full text-sm font-medium">Contact Us</a>
+    <a href="/#cta" class="mt-4 block w-full text-center py-3 bg-gradient-to-r from-[#6488FF] to-[#1B18FE] rounded-full text-sm font-medium">Contact Us</a>
   </nav>
 </header>
 
